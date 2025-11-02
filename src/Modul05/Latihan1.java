@@ -8,6 +8,7 @@ public class Latihan1 {
             @Override
             public void run() {
                 // membuat object Hframe
+                // default dari layout JFrame adalah BorderLayout
                 JFrame frame = new JFrame("Jendela pertamaku");
 
                 // atur ukuran jendela ( lebar 400, tinggi 300 )
