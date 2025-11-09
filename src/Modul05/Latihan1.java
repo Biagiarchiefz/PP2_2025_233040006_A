@@ -4,6 +4,9 @@ import javax.swing.*;
 
 public class Latihan1 {
     public static void main(String[] args) {
+
+        // SwingUtilities.invokeLater() dijalankan di thread Event Dispatch Thread itu pekerja khusus bagian UI.
+        // GUI bisa Freeze atau event delay langsung menulis kode program GUI dimain
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
