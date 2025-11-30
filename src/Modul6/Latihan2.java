@@ -7,7 +7,7 @@ public class Latihan2 {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             // 1. buat frame
-            JFrame frame = new JFrame("Konver Suhu");
+            JFrame frame = new JFrame("Konversi Suhu");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(300, 200);
 

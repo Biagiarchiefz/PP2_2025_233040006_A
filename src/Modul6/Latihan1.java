@@ -33,7 +33,7 @@ public class Latihan1 {
                         "0", ".", "=", "+"
                 };
 
-//                kita looping si buttonLabelsnya lalu masing value si arraynya kita simpan ke dalam variabel label
+                // kita looping si buttonLabelsnya lalu masing value si arraynya kita simpan ke dalam variabel label
                 for (String label : buttonLabels) {
                     JButton button = new JButton(label);
                     buttonPanel.add(button);  // kita masukkan button" yang kita kasi label sesuai dengan buttonLables tadi ke dalam buttonPanel
