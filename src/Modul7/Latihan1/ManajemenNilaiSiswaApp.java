@@ -15,6 +15,17 @@ public class ManajemenNilaiSiswaApp extends JFrame {
     private DefaultTableModel tableModel;
 
 
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new ManajemenNilaiSiswaApp().setVisible(true);
+        });
+
+
+
+    }
+
+
     private JPanel createInputPanel() {
         JPanel panel = new JPanel(new GridLayout(4,2,10,10));
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20 ,20));
@@ -59,8 +70,6 @@ public class ManajemenNilaiSiswaApp extends JFrame {
             }
         });
 
-
-
         return panel;
     }
 
@@ -74,7 +83,7 @@ public class ManajemenNilaiSiswaApp extends JFrame {
         // setup Model tabel (Kolom)
        String[] kolom = {"Nama Siswa", "mata pelajaran", "nilai", "grade"};
        tableModel = new DefaultTableModel(kolom, 0);
-        tableData = new JTable(tableModel);
+       tableData = new JTable(tableModel);
 
         // Tugas 2 menambahkan button hapus
         btnHapus.addActionListener(e -> {
@@ -86,7 +95,6 @@ public class ManajemenNilaiSiswaApp extends JFrame {
                 JOptionPane.showMessageDialog(this, "Pilih baris yang ingin dihapus", "Error", JOptionPane.WARNING_MESSAGE);
             }
         });
-
 
         // Panel khusus tombol
         JPanel panelButton = new JPanel();
@@ -215,13 +223,5 @@ public class ManajemenNilaiSiswaApp extends JFrame {
         add(tabbedPane);
 
     }
-
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new ManajemenNilaiSiswaApp().setVisible(true);
-        });
-    }
-
 
 }
