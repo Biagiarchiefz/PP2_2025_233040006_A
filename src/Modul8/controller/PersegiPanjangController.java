@@ -18,6 +18,7 @@ public class PersegiPanjangController {
 
         // Menghubungkan tombol di view dengan logic di Controller
         this.view.addHitungListener(new HitungListener());
+        this.view.addResetListener(new ResetListener());
     }
 
 
@@ -36,10 +37,11 @@ public class PersegiPanjangController {
 
                 // 3. Jalankan logika bisnis di model
                 model.hitungLuas();
+                model.hitungKeliling();
 
                 // 4. Ambil hasil dari model dan tampilkan
-                double hasil = model.getLuas();
-                view.setHasil(hasil);
+                view.setLuas(model.getLuas());
+                view.setKeliling(model.getKeliling());
 
             } catch (NumberFormatException ex){
                 // Handle jika use memasukkan huruf
@@ -48,5 +50,11 @@ public class PersegiPanjangController {
         }
     }
 
+
+    class ResetListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            view.resetForm();
+        }
+    }
 
 }

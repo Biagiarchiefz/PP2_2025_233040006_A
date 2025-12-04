@@ -4,8 +4,12 @@ public class PersegiPanjangModel {
     private double panjang;
     private double lebar;
     private double luas;
+    private double keliling;
 
 
+    public void hitungKeliling () {
+        this.keliling = 2 * (this.panjang + this.lebar);
+    }
 
     // Menghitung Luas ( logika bisnis )
     public void hitungLuas() {
@@ -24,6 +28,10 @@ public class PersegiPanjangModel {
 
     public double getLuas() {
         return luas;
+    }
+
+    public double getKeliling() {
+        return  keliling;
     }
 
 
