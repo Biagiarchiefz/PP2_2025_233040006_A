@@ -1,4 +1,4 @@
-package Modul10;
+package Modul10.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
